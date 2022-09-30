@@ -8,7 +8,7 @@ public class Tax {
         int marriedAllowance = 264000;
         int eachChildAllowance = 100000;
         int eachBroAllowance = 33000;
-        int eachOldpplAllowance = 46000;
+        int eachDependentParentsAllowance = 46000;
         int singleOrMarried; // variable of case single or case married
 //ask question
         System.out.print("Please enter your yearly income : ");
@@ -44,13 +44,15 @@ public class Tax {
         int bro = input.nextInt();
 
         System.out.print("How many dependent parents and grandparents do you have? ");
-        int oldppl = input.nextInt();
+        int dependentParents = input.nextInt();
 //calculation
-        int totalAllowance = singleOrMarried + eachChildAllowance * children + eachBroAllowance * bro + eachOldpplAllowance * oldppl;
+        int totalAllowance = singleOrMarried + eachChildAllowance * children + eachBroAllowance * bro + eachDependentParentsAllowance * dependentParents;
         int netChargeableIncome = income - totalAllowance; // calculate the net chargeable income
         double progressiveTax;
         double standardTaxRate = 0.15; // set standard tax rate
         double standardTax = netChargeableIncome * standardTaxRate; // calculate the standard tax
+
+        String printProgressiveTax;
 
         int first = 40000; // the progressive tax
         double firstTaxRate = 0.02;
@@ -61,44 +63,40 @@ public class Tax {
         int remain = netChargeableIncome - (first + second + third);
         double remainTaxRate = 0.17;
 
-        double firstFloor = first * firstTaxRate;
-        double secondFloor = second * secondTaxRate;
-        double thirdFloor = third * thirdTaxRate;
+        long firstFloor = Math.round(first * firstTaxRate); //Math.round for output integer
+        long secondFloor = Math.round(second * secondTaxRate);
+        long thirdFloor = Math.round(third * thirdTaxRate);
 
-        System.out.printf("Your allowance is $" + totalAllowance);
+        System.out.println("Your allowance is $" + totalAllowance);
         if (income - totalAllowance <= 0) {
-            System.out.print("\nYou do not have to pay any tax");
+            System.out.println("You do not have to pay any tax");
             return;
         } else {
             // to classify the type of progressive tax
-            System.out.printf("\nYour net chargeable income is $" + income + " - $" + totalAllowance + " = $" + netChargeableIncome);
+            System.out.println("Your net chargeable income is $" + income + " - $" + totalAllowance + " = $" + netChargeableIncome);
             if (netChargeableIncome <= (first)) {
                 progressiveTax = netChargeableIncome * firstTaxRate; // first floor tax
+                printProgressiveTax = "Your payable tax is $" + Math.round(progressiveTax) + "\n"; //Math.round for output integer
             } else if (netChargeableIncome <= (first + second)) {
                 progressiveTax = firstFloor + (netChargeableIncome - first) * secondTaxRate; // second floor tax
+                printProgressiveTax = "Your payable tax is $" + firstFloor + " + $" + Math.round(progressiveTax - firstFloor) + " = $" + Math.round(progressiveTax) + "\n";
             } else if (netChargeableIncome <= (first + second + third)) {
                 progressiveTax = firstFloor + secondFloor + (netChargeableIncome - (first + second)) * thirdTaxRate; // third floor tax
+                printProgressiveTax = "Your payable tax is $" + firstFloor + " + $" + secondFloor + " + $" + Math.round(progressiveTax - (firstFloor + secondFloor)) + " = $" + Math.round(progressiveTax) + "\n";
             } else {
                 progressiveTax = firstFloor + secondFloor + thirdFloor + (remain) * remainTaxRate; // final floor tax
+                printProgressiveTax = "Your payable tax is $" + firstFloor + " + $" + secondFloor + " + $" + thirdFloor + " + $" + Math.round(progressiveTax - (firstFloor + secondFloor + thirdFloor)) + " = $" + Math.round(progressiveTax) + "\n";
             }
         }
-        if (standardTax - progressiveTax < 0) {
+        if (standardTax < progressiveTax) {
             // this is standard tax
-            System.out.print("\nYou have to pay standard tax");
-            System.out.print("\nYour payable tax is $" + netChargeableIncome);
+            System.out.println("You have to pay standard tax");
+            System.out.print("Your payable tax is $" + netChargeableIncome);
             System.out.printf(" x %.0f%% = $%.0f" , (standardTaxRate * 100) , standardTax); //0.15 * 100 = 15%
         } else {
             // this is progressive tax
             // to classify the type of progressive tax and print
-            if (netChargeableIncome <= first) {
-                System.out.printf("\nYour payable tax is $%.0f", progressiveTax); // first floor
-            } else if (netChargeableIncome <= (first + second)) {
-                System.out.printf("\nYour payable tax is $%.0f + $%.0f = $%.0f" , firstFloor , (progressiveTax - firstFloor), progressiveTax); // second floor
-            } else if (netChargeableIncome <= (first + second + third)) {
-                System.out.printf("\nYour payable tax is $%.0f + $%.0f + $%.0f = $%.0f" , firstFloor , secondFloor , (progressiveTax - (firstFloor + secondFloor)), progressiveTax); // third floor
-            } else {
-                System.out.printf("\nYour payable tax is $%.0f + $%.0f + $%.0f + $%.0f = $%.0f" , firstFloor , secondFloor , thirdFloor , (progressiveTax - (firstFloor + secondFloor + thirdFloor)), progressiveTax); // final floor
-            }
+            System.out.println(printProgressiveTax);
         }
     }
 }
