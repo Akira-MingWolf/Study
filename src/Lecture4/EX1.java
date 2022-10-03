@@ -5,24 +5,24 @@ public class EX1 {
         //while loop
         System.out.println("While-loop");
         System.out.print("Integers : ");
-        int whileLoopIntegerCount = 10; // Initialization
-        while (whileLoopIntegerCount <= 15) { // looping condition
-            System.out.print(whileLoopIntegerCount + " ");
-            whileLoopIntegerCount ++; // Increment
+        int i = 10; // Initialization
+        while (i <= 15) { // looping condition
+            System.out.print(i + " ");
+            i ++; // Increment
         }
         System.out.println(); // skip line
         System.out.print("Even : ");
-        int whileLoopEvenCount = 10; // Initialization
-        while (whileLoopEvenCount <= 15) { // looping condition
-            System.out.print(whileLoopEvenCount + " ");
-            whileLoopEvenCount += 2; // Increment
+        int i1 = 10; // Initialization
+        while (i1 <= 15) { // looping condition
+            System.out.print(i1 + " ");
+            i1 += 2; // Increment
         }
         System.out.println(); // skip line
         System.out.print("Odd : ");
-        int whileLoopOddCount = 11; // Initialization
-        while (whileLoopOddCount <= 15) { // looping condition
-            System.out.print(whileLoopOddCount + " ");
-            whileLoopOddCount += 2; // Increment
+        int i2 = 11; // Initialization
+        while (i2 <= 15) { // looping condition
+            System.out.print(i2 + " ");
+            i2 += 2; // Increment
         }
 
 
@@ -30,46 +30,46 @@ public class EX1 {
         System.out.println(); // skip line
         System.out.println("Do-while loop");
         System.out.print("Integers : ");
-        int doWhileLoopIntegerCount = 10; // Initialization
+        int i3 = 10; // Initialization
         do {
-            System.out.print(doWhileLoopIntegerCount + " ");
-            doWhileLoopIntegerCount ++; // Increment
-        } while (doWhileLoopIntegerCount <= 15); // looping condition
+            System.out.print(i3 + " ");
+            i3 ++; // Increment
+        } while (i3 <= 15); // looping condition
         System.out.println(); // skip line
         System.out.print("Even : ");
-        int doWhileLoopEvenCount = 10; // Initialization
+        int i4 = 10; // Initialization
         do {
-            System.out.print(doWhileLoopEvenCount + " ");
-            doWhileLoopEvenCount += 2; // Increment
-        } while (doWhileLoopEvenCount <= 15); // looping condition
+            System.out.print(i4 + " ");
+            i4 += 2; // Increment
+        } while (i4 <= 15); // looping condition
         System.out.println(); // skip line
         System.out.print("Odd : ");
-        int doWhileLoopOddCount = 11; // Initialization
+        int i5 = 11; // Initialization
         do {
-            System.out.print(doWhileLoopOddCount + " ");
-            doWhileLoopOddCount += 2; // Increment
-        } while (doWhileLoopOddCount <= 15); // looping condition
+            System.out.print(i5 + " ");
+            i5 += 2; // Increment
+        } while (i5 <= 15); // looping condition
 
 
         // for loop
         System.out.println(); // skip line
         System.out.println("For-loop");
         System.out.print("Integers : ");
-        int forLoopIntegerCount;
-        for (forLoopIntegerCount = 10       ; forLoopIntegerCount <=15      ; forLoopIntegerCount ++) {
-            System.out.print(forLoopIntegerCount + " ");
+        int i6;
+        for (i6 = 10       ; i6 <=15      ; i6 ++) { // Initialization + looping condition + Increment
+            System.out.print(i6 + " ");
         }
         System.out.println(); // skip line
         System.out.print("Even : ");
-        int forLoopEvenCount;
-        for (forLoopEvenCount = 10      ; forLoopEvenCount <= 15        ; forLoopEvenCount += 2) {
-            System.out.print(forLoopEvenCount + " ");
+        int i7;
+        for (i7 = 10      ; i7 <= 15        ; i7 += 2) { // Initialization + looping condition + Increment
+            System.out.print(i7 + " ");
         }
         System.out.println(); // skip line
         System.out.print("Odd : ");
-        int forLoopOddCount;
-        for (forLoopOddCount = 11       ; forLoopOddCount <=15      ; forLoopOddCount += 2) {
-            System.out.print(forLoopOddCount + " ");
+        int i8;
+        for (i8 = 11       ; i8 <=15      ; i8 += 2) { // Initialization + looping condition + Increment
+            System.out.print(i8 + " ");
         }
     }
 }

@@ -10,11 +10,11 @@ public class EX3 {
         System.out.print("Please enter the number of rows of the multiplication table : ");
         int numOfRow = input.nextInt();
 
-        int numOfRowCount = 1;
+        int i = 1;
         int ans;
-        for (       ;numOfRowCount <= numOfRow       ;numOfRowCount ++) {
-            ans = numOfRowCount * integer;
-            System.out.println(numOfRowCount + " x " + integer + " = " + ans);
+        for (       ;i <= numOfRow       ;i ++) {
+            ans = i * integer;
+            System.out.println(i + " x " + integer + " = " + ans);
         }
     }
 }

@@ -5,36 +5,36 @@ public class EX2 {
         //using while loop
         System.out.println("Using while-loop");
         System.out.print("The sum of ");
-        int whileLoopCount = 10;
-        int whileLoopAns = 0;
-        while (whileLoopCount <= 50) {
-            System.out.print(whileLoopCount + " ");
-            whileLoopAns += whileLoopCount;
-            whileLoopCount += 10;
+        int i = 10; // Initialization
+        int Ans = 0;
+        while (i <= 50) { // looping condition
+            System.out.print(i + " ");
+            Ans += i; // Increment
+            i += 10;
         }
-        System.out.print("is " + whileLoopAns + "\n");
+        System.out.print("is " + Ans + "\n");
 
         // using do while loop
         System.out.println("Using do-while loop");
         System.out.print("The sum of ");
-        int doWhileLoopCount = -6;
-        int doWhileLoopAns = 0;
+        int i1 = -6; // Initialization
+        int Ans1 = 0;
         do {
-            System.out.print(doWhileLoopCount + " ");
-            doWhileLoopAns += doWhileLoopCount;
-            doWhileLoopCount --;
-        } while (doWhileLoopCount >= -10);
-        System.out.print("is " + doWhileLoopAns + "\n");
+            System.out.print(i1 + " ");
+            Ans1 += i1; // Increment
+            i1 --;
+        } while (i1 >= -10); // looping condition
+        System.out.print("is " + Ans1 + "\n");
 
         // using for loop
         System.out.println("Using for-loop");
         System.out.print("The average of ");
-        int forLoopCount;
-        double forLoopAns = 0;
-        for (forLoopCount = 110     ; forLoopCount <= 125       ; forLoopCount += 5) {
-            System.out.print(forLoopCount + " ");
-            forLoopAns += forLoopCount;
+        int i2;
+        double Ans3 = 0;
+        for (i2 = 110     ; i2 <= 125       ; i2 += 5) { // Initialization + looping condition + Increment
+            System.out.print(i2 + " ");
+            Ans3 += i2;
         }
-        System.out.print("is " + forLoopAns/4);
+        System.out.print("is " + Ans3/4);
     }
 }
