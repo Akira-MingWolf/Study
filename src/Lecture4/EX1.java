@@ -15,14 +15,14 @@ public class EX1 {
         int whileLoopEvenCount = 10; // Initialization
         while (whileLoopEvenCount <= 15) { // looping condition
             System.out.print(whileLoopEvenCount + " ");
-            whileLoopEvenCount += 2;
+            whileLoopEvenCount += 2; // Increment
         }
         System.out.println(); // skip line
         System.out.print("Odd : ");
         int whileLoopOddCount = 11; // Initialization
         while (whileLoopOddCount <= 15) { // looping condition
             System.out.print(whileLoopOddCount + " ");
-            whileLoopOddCount += 2;
+            whileLoopOddCount += 2; // Increment
         }
 
 
@@ -33,21 +33,21 @@ public class EX1 {
         int doWhileLoopIntegerCount = 10; // Initialization
         do {
             System.out.print(doWhileLoopIntegerCount + " ");
-            doWhileLoopIntegerCount ++;
+            doWhileLoopIntegerCount ++; // Increment
         } while (doWhileLoopIntegerCount <= 15); // looping condition
         System.out.println(); // skip line
         System.out.print("Even : ");
         int doWhileLoopEvenCount = 10; // Initialization
         do {
             System.out.print(doWhileLoopEvenCount + " ");
-            doWhileLoopEvenCount += 2;
+            doWhileLoopEvenCount += 2; // Increment
         } while (doWhileLoopEvenCount <= 15); // looping condition
         System.out.println(); // skip line
         System.out.print("Odd : ");
         int doWhileLoopOddCount = 11; // Initialization
         do {
             System.out.print(doWhileLoopOddCount + " ");
-            doWhileLoopOddCount += 2;
+            doWhileLoopOddCount += 2; // Increment
         } while (doWhileLoopOddCount <= 15); // looping condition
 
 
