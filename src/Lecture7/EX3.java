@@ -26,6 +26,8 @@ public class EX3 {
         for (int i = 0       ;i < n       ;i ++       ) {
             B[i] = A[i].clone();
             Arrays.sort(B[i]);
+        }
+        for (int i = 0       ;i < n       ;i ++       ) {
             for (int j = 0       ;j < n       ;j ++       ) {
                 System.out.print(B[i][j] + " ");
             }
@@ -35,12 +37,8 @@ public class EX3 {
         int C[][] = new int[n][n];
         System.out.println("An identity matrix");
         for (int i = 0       ;i < n       ;i ++       ) {
+            C[i][i] = 1;
             for (int j = 0       ;j < n       ;j ++       ) {
-                if (i == j) {
-                    C[i][j] = (int) 1;
-                } else {
-                    C[i][j] = (int) 0;
-                }
                 System.out.print(C[i][j] + " ");
             }
             System.out.println();

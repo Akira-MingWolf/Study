@@ -8,9 +8,9 @@ public class EX1 {
         int arr[][] = { {10,39,8},{3},{35,87},{22},{34} };
         for (int i = 0       ;i < arr.length       ;i ++       ) {
             int a[] = arr[i];
+            total += a.length;
             for (int j = 0       ;j < a.length       ;j ++       ) {
                 System.out.print(a[j] + " ");
-                total ++;
                 sum += a[j];
             }
             System.out.println();
