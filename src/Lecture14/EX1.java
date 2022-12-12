@@ -1,5 +1,4 @@
 package Lecture14;
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,7 +7,7 @@ import java.util.*;
 public class EX1 {
     static Scanner in;
     public static String askString(String s) {
-        String ans = "";
+        String ans;
         while (true) {
             System.out.println(s);
             try {
@@ -25,7 +24,7 @@ public class EX1 {
         }
     }
     public static int askInt(String s) {
-        int ans = 0;
+        int ans;
         while (true) {
             System.out.println(s);
             try {
@@ -43,7 +42,7 @@ public class EX1 {
         }
     }
     public static double askDouble(String s) {
-        double ans = 0.0;
+        double ans;
         while (true) {
             System.out.println(s);
             try {
@@ -78,7 +77,7 @@ public class EX1 {
 
     public static void main (String[] args) {
         in = new Scanner(System.in);
-        ArrayList<String> info = new ArrayList<String>();
+        ArrayList<String> info = new ArrayList<>();
         String name = askString("What is your name?"); // Ask a string
         info.add(name);
         int age = askInt("What is your age?"); // Ask a valid int
